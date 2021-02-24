@@ -20,3 +20,17 @@ test@linux:~$ CUDA_VISIBLE_DEVICES=0 python exe_mnist.py -wn -nq -c "3, 6" -s 4 
 test@linux:~$ CUDA_VISIBLE_DEVICES=0 python exe_mnist.py -wn -c "3, 6" -s 4 -e 30 -m "10, 20" -chk > log/QFNET_36_wo.res  
 ```
 
+For datasets with more than 2 classes. Please use the following script to run the experiments.
+
+```
+$dataset is the interested classes
+
+# 3 classes
+python -u exe_mnist.py -qa "-1 -1 1 1 1 -1 1 -1, -1 -1 -1" -nn "8, 3" -bin -qt -c $dataset -s 4 -l 0.1 -ql 0.0001 -e 5 -m "2, 4" 
+
+# 4 classes
+python -u exe_mnist.py -qa "1 -1 1 -1 -1 1 -1 -1 1 1 -1 -1 -1 1 1 1, -1 -1 -1 -1" -nn "16, 4" -bin -qt -c $dataset -s 8 -l 0.1 -ql 0.0001 -e 5 -m "2, 4" 
+
+# 5 classes
+python -u exe_mnist.py -qa "1 -1 1 -1 -1 1 -1 -1 1 1 -1 -1 -1 1 1 1, -1 -1 -1 -1 -1" -nn "16, 5" -bin -qt -c $dataset -s 8 -l 0.1 -ql 0.0001 -e 5 -m "2, 4"
+```
