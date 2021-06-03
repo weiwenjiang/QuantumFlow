@@ -1,7 +1,7 @@
 
 ![](https://raw.githubusercontent.com/weiwenjiang/QML_tutorial/main/Readme_Img/qflow.png)
 
-QuantumFlow is an open-source framework. Its [website](wjiang.nd.edu/categories/QF) has been built for access. In addition, we have a [tutorial repo](https://github.com/weiwenjiang/QML_tutorial) for the quantum circuit part.
+QuantumFlow is an open-source framework. Its [website](https://jqub.github.io/categories/QF/) has been built for access. This repo released all the source codes. In addition to this, we have a [tutorial repo](https://github.com/weiwenjiang/QuantumFlow_Tutorial) at Github.
 
 This repo gives the detailed implementation on the classical side to training the model, which will generate the input of QuantumFlow.
 
